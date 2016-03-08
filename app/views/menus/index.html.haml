@@ -1,0 +1,13 @@
+- @menus.each_slice(3) do |menus|
+  .row
+    - menus.each do |menu|
+      .col-md-4
+        .recipe
+          .image_wrapper
+            = link_to menu do
+              = image_tag menu.picture.url(:medium), size: "300x300"
+          %h2= link_to menu.name, menu
+- if user_signed_in?
+  .row
+    .col-md-12
+      = link_to "New Menu", new_menu_path, class: "btn btn-default"

@@ -1,0 +1,12 @@
+%h1 Welcome
+%p This is the admin dashboard
+
+- @menus.each_slice(3) do |menus|
+  .row
+    - menus.each do |menu|
+      .col-md-4
+        .recipe
+          .image_wrapper
+            = link_to menu do
+              = image_tag menu.picture.url(:medium), size: "300x300"
+          %h2= link_to menu.name, menu
