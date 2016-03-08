@@ -32,4 +32,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ##New Included gems
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
-
+gem 'aws-sdk', '~> 2.2', '>= 2.2.24'
