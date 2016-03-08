@@ -11,8 +11,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass'
@@ -25,11 +23,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'pg'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ##New Included gems
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.24'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
